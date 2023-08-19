@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import Head from "../components/Head";
 import PageContainer from "../components/PageContainer";
 import { MaxWidth, Grid, Text } from "../components/ui";
+import { useScreenSize } from "../utils/react-responsive";
 
 const Selected = () => {
   return (
@@ -65,12 +66,18 @@ const StyledWorkItem = styled.div`
 `;
 
 const WorkItem = ({ year, title }) => {
+  const { screenSize } = useScreenSize();
   return (
     <StyledWorkItem>
-      <Grid container spacing={4}>
+      <Grid
+        container
+        spacing={screenSize.isSm ? 0 : 4}
+        mb={screenSize.isSm ? 4 : 0}
+      >
         <Grid item>
           <Text lightened>{year}</Text>
         </Grid>
+
         <Grid item>
           <Text lightened>Publication</Text>
         </Grid>
