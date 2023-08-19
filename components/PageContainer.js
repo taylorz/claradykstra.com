@@ -12,6 +12,10 @@ const StyledPageContainer = styled.div`
 `;
 const StyledPageContent = styled.div`
   margin-left: ${({ theme }) => theme.util.buffer * 64}px;
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoint.sm}px) {
+    padding-top: ${({ theme }) => theme.util.buffer * 4}px;
+    margin-left: 0;
+  }
 `;
 
 const PageContainer = ({ children }) => {

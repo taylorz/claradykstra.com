@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { Grid, Text } from "../components/ui";
+import { useScreenSize } from "../utils/react-responsive";
 
 const StyledNavigation = styled.div`
   width: 100%;
@@ -10,16 +11,17 @@ const StyledNavigation = styled.div`
 
 const Navigation = ({}) => {
   const router = useRouter();
+  const { screenSize } = useScreenSize();
 
   return (
     <StyledNavigation>
-      <Grid container ml={12}>
+      <Grid container ml={screenSize.isSm ? 0 : 12}>
         <Grid item xs={12}>
           <Link href="/">
             <Text>Clara Dykstra</Text>
           </Link>
         </Grid>
-        <Grid item xs={12} ml={24}>
+        <Grid item xs={12} ml={screenSize.isSm ? 12 : 24}>
           <Link href="/selected">
             <Text lightened={router.pathname !== "/selected"} hoverable>
               Selected

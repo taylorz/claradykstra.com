@@ -9,46 +9,48 @@ const Selected = () => {
     <>
       <Head title="Clara Dykstra" />
       <PageContainer>
-        <Grid container>
-          <Grid item xs={12}>
-            <WorkItem
-              year="2023"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2022"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2022"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2021"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2020"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2019"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2018 to 2020"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2018"
-              title="Locations of Justice Series: After Arrest"
-            />
-            <WorkItem
-              year="2018"
-              title="Locations of Justice Series: After Arrest"
-            />
+        <MaxWidth>
+          <Grid container>
+            <Grid item xs={12}>
+              <WorkItem
+                year="2023"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2022"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2022"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2021"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2020"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2019"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2018 to 2020"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2018"
+                title="Locations of Justice Series: After Arrest"
+              />
+              <WorkItem
+                year="2018"
+                title="Locations of Justice Series: After Arrest"
+              />
+            </Grid>
           </Grid>
-        </Grid>
+        </MaxWidth>
       </PageContainer>
     </>
   );
